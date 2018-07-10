@@ -60,4 +60,38 @@ describe('Recipes', function () {
       });
   });
 
+  // PUT: init some update data, make GET to grab item to update
+  // add id to updateData
+  // make a PUT req with data and inspect res to have right 
+  // status code and data
+  it('should update items on PUT', function () {
+    const updateData = {
+      name: 'bar',
+      ingredients: ['foo', 'bar', 'baz']
+    };
+
+    return (
+      chai
+        .request(app)
+        .get('/recipes')
+        .then(function (res) {
+          updateData.id = res.body[0].id;
+          // return a promise whose val be res object. Inspect in .then
+          return chai
+            .request(app)
+            .put(`/recipes/${updateData.id}`)
+            .send(updateData);
+        })
+        // show PUT req has right status code
+        .then(function (res) {
+          expect(res).to.have.status(204);
+          // expect(res).to.be.json;
+          // expect(res.body).to.be.a('object');
+          // expect(res.body).to.deep.equal(updateData);
+        })
+    );
+  });
+
+
+
 });
