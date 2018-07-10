@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: 19u6VfdnRolKUF16j3708lX3w+MpSZaYUMuA5fTJ1Ky0ZBt+Ardxc0hhm8xIsQ5nY/Y+7OtsfAMT247vjckuqBJkwoZCScDFWzwOFREdrjlOm6otn9xmoIGP33UWcfM0WjWn+PWlU4r6fof4GUfun1/3z/V+4kHJFG/fjbXHW3DgJ65Yoxil/6UB6YWR+Zjb3xE1yFjAGL38+8Ph4K6kE7onAHcuqxpajd4ahL8hKsQtgXorT7MZDG3c1+E1DfUJQHjYgvRmIAWyiuz3RG930yiO4O4EQCWW9tVcP55ePc46rj6sNvLCFIF30Oo6O55FlOayA3I9KIkWvGNV2lDFUZuszF9c8iW/Bt10qZrKVIaRCj/UaIh+5stS3GgVC7XUWN6W3gItojfZpOkX6PdjD1mU8+0ESwFclrYvbsYHQMjyfWnvNRn2FqnVODW9qP5S6eU4AI0eXlMqa2FhOrCfYoOT6dDmB+G9SJkT3aG+WXqerDgCOaK2f/b6tgeEbL6IT1AoHvT8P7XGw3dKx9PUv3mNPDpzU7+6UIj0+TNx9ZMiRX/WISIZWgDt1vhvmNyqOlVt4kS51V54SqO2v8TfWBvZD95qEFPKZrF8RVT38qmuOWnOCsUAfDDWJsoyrD78xnI/A1xyq9/5wXB8euWqbAl0Ky4YeUHpJc+KK4IavfI=
+  app: travis-ci-node
+  on:
+    repo: birisora/node-shopping-list-integration-tests
